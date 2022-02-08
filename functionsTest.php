@@ -1,15 +1,19 @@
 <?php
 
-require '../functions.php';
-use PHPUnit\Framework\TestCase;
 
-class loopsthrougharrayTest extends TestCase {
+use PHPUnit\Framework\TestCase;
+require_once '../functions.php';
+
+class loopsThroughArrayTest extends TestCase {
     // Our success test
-    public function testSuccessSum()
+    public function testSuccessLoopsThroughArray(): void
     {
-        $expected = 6;
-        $inputA = 3;
-        $inputB = 3;
-        $case = sum($inputA, $inputB);
-        $this->assertEquals($expected, $case);
+        $input = [
+            ['name' => 'Maggie Enterrios'],
+            ['name' => 'Malika Favre']
+        ];
+        $expected = '<div>Maggie Enterrios</div><div>Malika Favre</div>';
+        $case = loopsthroughArray($input);
+        $this->assertEquals($case, $expected);
+    }
     }
