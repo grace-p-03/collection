@@ -24,7 +24,20 @@ function queryDatabase($db){
     return $query->fetchAll();
 }
 
-function loopsthroughArray (array $illustrators): string {
+
+/**
+ * Diplays the illustrators data as readable HTML on the front end
+ *
+ * @param array $illustrators collection of illustrators
+ *
+ * @param string $illustrator individual illustrators
+ *
+ * @return string the illustrators data as readable HTML on the front end
+ */
+function displayIllustrators (array $illustrators): string {
+    if (!count($illustrators)){
+        return '<div>No items found in the database</div>';
+    }
     $result = '';
     foreach ($illustrators as $illustrator){
         $result .= '<div>' . $illustrator['name'] . '</div>';
