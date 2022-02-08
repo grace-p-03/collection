@@ -4,23 +4,34 @@
 use PHPUnit\Framework\TestCase;
 require_once '../functions.php';
 
-class loopsThroughArrayTest extends TestCase {
+class functionsTest extends TestCase {
 
-    public function testSuccessLoopsThroughArray(): void
+    public function testSuccessDisplayIllustrators(): void
     {
         $input = [
-            ['name' => 'Maggie Enterrios'],
-            ['name' => 'Malika Favre']
+            [
+                'name' => 'Malika Favre',
+                'image' => 'test.jpg',
+                'instagram' => '@malikafavre',
+                'location' => 'Barcelona',
+                'website' => 'malikafavre.com'
+            ]
         ];
-        $expected = '<div>Maggie Enterrios</div><div>Malika Favre</div>';
+        $expected = '<div>Malika Favre</div><div><img src="test.jpg"alt="Example image of illustrator\'s work"/></div><div>@malikafavre</div><div>Barcelona</div><div>malikafavre.com</div>';
         $case = loopsthroughArray($input);
         $this->assertEquals($case, $expected);
     }
-    public function testFailureLoopsThroughArrayMissingKey(): void
+    public function testFailureDisplayIllustratorsMissingKey(): void
     {
         $input = [];
         $expected = '<div>No items found in the database</div>';
         $case = loopsthroughArray($input);
         $this->assertEquals($case, $expected);
     }
+    public function testMalformedDisplayIllustrators()
+    {
+        $input = true;
+        $this->expectException(TypeError::class);
+        loopsthroughArray($input);
     }
+}
