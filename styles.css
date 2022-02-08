@@ -29,17 +29,16 @@ main {
 }
 
 h2 {
-    text-align: center;
     font-size: 1.5rem;
 }
 
 h3 {
-    text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin:10px 0px;
 }
 
 p {
-    /*text-align: center;*/
+    margin:5px 0px;
 }
 
 img {
