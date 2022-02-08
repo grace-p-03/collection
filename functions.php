@@ -42,9 +42,9 @@ function displayIllustrators (array $illustrators): string {
     foreach ($illustrators as $illustrator){
         $result .= '<main><section><h2>' . $illustrator['name'] . '</h2>';
         $result .= '<div><img src="' . $illustrator['image'] . '"' . 'alt="Example image of illustrator\'s work"/>' . '</div>';
-        $result .= '<p>' . $illustrator['instagram'] . '</p>';
-        $result .= '<p>' . $illustrator['location'] . '</p>';
-        $result .= '<p>' . $illustrator['website'] . '</p></section></main>';
+        $result .= '<h3>' . $illustrator['instagram'] . '</h3>';
+        $result .= '<p>' . $illustrator['website'] . '</p>';
+        $result .= '<p>' . $illustrator['location'] . '</p></section></main>';
     }
     return $result;
 }
