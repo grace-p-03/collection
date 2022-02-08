@@ -1,16 +1,3 @@
-<?php
-
-require_once 'functions.php';
-
-$db = fetchDatabase();
-$result = queryDatabase($db);
-
-$result = displayIllustrators($result);
-
-echo $result;
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,6 +14,16 @@ echo $result;
     <header>
         <h1>A Collection of Illustrators</h1>
     </header>
+    <main>
+        <?php
+        require_once 'functions.php';
+        $db = fetchDatabase();
+        $result = queryDatabase($db);
+
+        $result = displayIllustrators($result);
+        echo $result;
+        ?>
+    </main>
 	</body>
 
 </html>

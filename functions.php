@@ -40,11 +40,11 @@ function displayIllustrators (array $illustrators): string {
     }
     $result = '';
     foreach ($illustrators as $illustrator){
-        $result .= '<main><section><div>' . $illustrator['name'] . '</div>';
+        $result .= '<main><section><h2>' . $illustrator['name'] . '</h2>';
         $result .= '<div><img src="' . $illustrator['image'] . '"' . 'alt="Example image of illustrator\'s work"/>' . '</div>';
-        $result .= '<div>' . $illustrator['instagram'] . '</div>';
-        $result .= '<div>' . $illustrator['location'] . '</div>';
-        $result .= '<div>' . $illustrator['website'] . '</div></section></main>';
+        $result .= '<p>' . $illustrator['instagram'] . '</p>';
+        $result .= '<p>' . $illustrator['location'] . '</p>';
+        $result .= '<p>' . $illustrator['website'] . '</p></section></main>';
     }
     return $result;
 }
