@@ -13,18 +13,18 @@ class functionsTest extends TestCase {
                 'name' => 'Malika Favre',
                 'image' => 'test.jpg',
                 'instagram' => '@malikafavre',
-                'location' => 'Barcelona',
-                'website' => 'malikafavre.com'
+                'website' => 'malikafavre.com',
+                'location' => 'Barcelona'
             ]
         ];
-        $expected = '<div>Malika Favre</div><div><img src="test.jpg"alt="Example image of illustrator\'s work"/></div><div>@malikafavre</div><div>Barcelona</div><div>malikafavre.com</div>';
+        $expected = '<main><section><h2>Malika Favre</h2><div><img src="test.jpg"alt="Example image of illustrator\'s work"/></div><h3>@malikafavre</h3><p>malikafavre.com</p><p>Barcelona</p></section></main>';
         $case = displayIllustrators($input);
         $this->assertEquals($case, $expected);
     }
     public function testFailureDisplayIllustratorsMissingKey(): void
     {
         $input = [];
-        $expected = '<div>No items found in the database</div>';
+        $expected = '<div>Error! No items found in the database</div>';
         $case = displayIllustrators($input);
         $this->assertEquals($case, $expected);
     }
