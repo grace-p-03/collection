@@ -5,7 +5,8 @@
  *
  * @return PDO which is a link to the database
  */
-function fetchDatabase(){
+function fetchDatabase(): PDO {
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return new PDO('mysql:host=db; dbname=grace-collection', 'root', 'password');
 }
 
@@ -17,8 +18,8 @@ function fetchDatabase(){
  *
  * @return mixed the result of the query
  */
-function queryDatabase($db){
-    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+function getAllIllustrators(PDO $db): array {
     $query = $db->prepare("SELECT `name`, `image`, `instagram`, `location`, `website` FROM `illustrators`;");
     $query->execute();
     return $query->fetchAll();
