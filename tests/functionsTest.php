@@ -17,7 +17,7 @@ class functionsTest extends TestCase {
                 'location' => 'Barcelona'
             ]
         ];
-        $expected = '<main><section><h2>Malika Favre</h2><div><img src="test.jpg"alt="Example image of illustrator\'s work"/></div><h3>@malikafavre</h3><p>malikafavre.com</p><p>Barcelona</p></section></main>';
+        $expected = '<main><section><h2>Malika Favre</h2><div><img src="test.jpg"alt="Example image of illustrator\'s work"/></div><h3>@malikafavre</h3><p><a href="https://malikafavre.com">malikafavre.com</a></p><p>Barcelona</p></section></main>';
         $case = displayIllustrators($input);
         $this->assertEquals($case, $expected);
     }
