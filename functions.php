@@ -1,23 +1,23 @@
 <?php
 
 /**
- * Fetches a database
+ * Fetches data from a database
  *
  * @return PDO which is a link to the database
  */
-function fetchDatabase(){
+function fetchDatabase(): object {
     return new PDO('mysql:host=db; dbname=grace-collection', 'root', 'password');
 }
 
 
 /**
- * Retrieves all data from illustrators database
+ * Retrieves all data from database of illustrators
  *
  * @param $db database to be queried
  *
  * @return mixed the result of the query
  */
-function queryDatabase($db){
+function queryDatabase(object $db): array {
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $query = $db->prepare("SELECT `name`, `image`, `instagram`, `location`, `website` FROM `illustrators`;");
     $query->execute();
@@ -36,15 +36,15 @@ function queryDatabase($db){
  */
 function displayIllustrators (array $illustrators): string {
     if (!count($illustrators)){
-        return '<div>No items found in the database</div>';
+        return '<div>Error! No items found in the database</div>';
     }
     $result = '';
     foreach ($illustrators as $illustrator){
-        $result .= '<div>' . $illustrator['name'] . '</div>';
+        $result .= '<main><section><h2>' . $illustrator['name'] . '</h2>';
         $result .= '<div><img src="' . $illustrator['image'] . '"' . 'alt="Example image of illustrator\'s work"/>' . '</div>';
-        $result .= '<div>' . $illustrator['instagram'] . '</div>';
-        $result .= '<div>' . $illustrator['location'] . '</div>';
-        $result .= '<div>' . $illustrator['website'] . '</div>';
+        $result .= '<h3>' . $illustrator['instagram'] . '</h3>';
+        $result .= '<p>' . $illustrator['website'] . '</p>';
+        $result .= '<p>' . $illustrator['location'] . '</p></section></main>';
     }
     return $result;
 }
