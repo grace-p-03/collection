@@ -6,8 +6,9 @@
  * @return PDO which is a link to the database
  */
 function fetchDatabase(): PDO {
+    $db = new PDO('mysql:host=db; dbname=grace-collection', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    return new PDO('mysql:host=db; dbname=grace-collection', 'root', 'password');
+    return $db;
 }
 
 
