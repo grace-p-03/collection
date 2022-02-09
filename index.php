@@ -1,3 +1,10 @@
+<?php
+     require_once 'functions.php';
+     $db = fetchDatabase();
+     $result = queryDatabase($db);
+     $result = displayIllustrators($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,10 +23,6 @@
             </header>
                 <main>
                     <?php
-                    require_once 'functions.php';
-                    $db = fetchDatabase();
-                    $result = queryDatabase($db);
-                    $result = displayIllustrators($result);
                     echo $result;
                     ?>
                 </main>
