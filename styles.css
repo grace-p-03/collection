@@ -11,6 +11,7 @@ body {
     background-color:#262626;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
+    padding: 60px;
 }
 
 header {
@@ -28,6 +29,10 @@ main {
     justify-content: center;
 }
 
+section {
+    padding: 20px;
+}
+
 h2 {
     font-size: 1.5rem;
 }
@@ -38,7 +43,7 @@ h2:hover {
 
 h3 {
     font-size: 1.2rem;
-    margin:10px 0px;
+    margin:10px 0;
 }
 
 h3:hover {
@@ -46,7 +51,7 @@ h3:hover {
 }
 
 p {
-    margin:5px 0px;
+    margin:5px 0;
 }
 
 img {
@@ -54,16 +59,20 @@ img {
     height: 275px;
 }
 
-section {
-    padding: 20px;
-}
 
 @media only screen and (max-width: 280px) {
-    h1 {
-        font-size: 2.5rem;
-    }
     img {
         width: 230px;
         height: 230px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
     }
 }
