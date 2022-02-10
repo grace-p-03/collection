@@ -24,9 +24,9 @@ h1 {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 section {
@@ -37,13 +37,13 @@ h2 {
     font-size: 1.5rem;
 }
 
-/*h2:hover {*/
-/*    color: #2eccd3;*/
+h2:hover {
+    color: #c175ff;
 }
 
 h3 {
-    font-size: 1.2rem;
-    margin:10px 0;
+    font-size: 1.1rem;
+    margin:7px 0;
 }
 
 p {
@@ -57,6 +57,10 @@ a {
 
 .website:hover {
     color:#2eccd3;
+}
+
+.instagram:hover {
+    color:#F88379;
 }
 
 img {
