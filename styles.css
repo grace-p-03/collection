@@ -37,8 +37,8 @@ h2 {
     font-size: 1.5rem;
 }
 
-h2:hover {
-    color: #2eccd3;
+/*h2:hover {*/
+/*    color: #2eccd3;*/
 }
 
 h3 {
@@ -55,8 +55,8 @@ a {
     color: #ffffff;
 }
 
-a:hover {
-    color:#f88379;
+.website:hover {
+    color:#2eccd3;
 }
 
 img {
