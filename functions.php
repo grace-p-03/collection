@@ -43,8 +43,8 @@ function displayIllustrators (array $illustrators): string {
     foreach ($illustrators as $illustrator){
         $result .= '<main><section><h2>' . $illustrator['name'] . '</h2>';
         $result .= '<div><img src="' . $illustrator['image'] . '"' . 'alt="Example image of illustrator\'s work"/>' . '</div>';
-        $result .= '<h3>' . $illustrator['instagram'] . '</h3>';
-        $result .= '<p>' . $illustrator['website'] . '</p>';
+        $result .= '<h3><a class="instagram" target="_blank" href="https://instagram.com/' . $illustrator['instagram'] . '" >@' . $illustrator['instagram'] . '</a></h3>';
+        $result .= '<h3><a class="website" href="https://' . $illustrator['website'] . '">' . $illustrator['website'] . '</a></h3>';
         $result .= '<p>' . $illustrator['location'] . '</p></section></main>';
     }
     return $result;

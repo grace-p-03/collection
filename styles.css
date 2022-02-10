@@ -24,9 +24,9 @@ h1 {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 section {
@@ -38,20 +38,29 @@ h2 {
 }
 
 h2:hover {
-    color: #2eccd3;
+    color: #c175ff;
 }
 
 h3 {
-    font-size: 1.2rem;
-    margin:10px 0;
-}
-
-h3:hover {
-    color: #f88379;
+    font-size: 1.1rem;
+    margin:7px 0;
 }
 
 p {
     margin:5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.website:hover {
+    color:#2eccd3;
+}
+
+.instagram:hover {
+    color:#F88379;
 }
 
 img {
