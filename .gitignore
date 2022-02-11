@@ -12,8 +12,13 @@ bin-release/
 *.air
 *.ipa
 *.apk
+<<<<<<< HEAD
 .DS_Store
 .idea/
+=======
+*.idea
+.DS_Store
+>>>>>>> 8dd369cadb3c5dc5b6fa7b9a358e6f559823224e
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
